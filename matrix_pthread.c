@@ -29,6 +29,19 @@ void matrix_read()
     }
 }
 
+void print_matrix(int x[10][10])
+{
+    int i,j;
+    printf("output matrix  : ");
+    for (i = 0; i < m; i++)
+    {
+        printf("\n");
+        for (j = 0; j < n; j++)
+        {
+            printf("%d", x[i][j]);
+        }
+    }
+}
 
 
 void *multiplication(void *arg)
@@ -49,6 +62,8 @@ void *multiplication(void *arg)
             }
         }
     }
+    printf("matrix printed by thread : %d",num);
+    print_matrix(res);
 }
 
 int main()
