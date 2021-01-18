@@ -1,21 +1,23 @@
-#include <stdio.h>
-#include <omp.h> // including openmp header
 
-
-
-
-int main()
-{
-
-
-    //  # specify the block to be executed on parallel
-    #pragma opm parallel{
-
-        // print "hello world" from each thread 
-        printf("hello world");
-    }
-
+// OpenMP program to print Hello World 
+// using C language 
+  
+// OpenMP header 
+#include <omp.h> 
+  
+#include <stdio.h> 
+#include <stdlib.h> 
+  
+int main() 
+{ 
+  
+    // Beginning of parallel region 
+    #pragma omp parallel 
+    { 
+  
+        printf("Hello World... from thread = %d\n",
+               omp_get_thread_num()); 
+    } 
+    // Ending of parallel region 
     return 0;
 }
-
-//run openmp code = (gcc -fopenmp filename)
