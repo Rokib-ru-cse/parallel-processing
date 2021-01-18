@@ -21,3 +21,6 @@ int main()
     // Ending of parallel region 
     return 0;
 }
+
+// specifies number of thread = export OMP_NUM_THREADS=5
+// compife openmp program = gcc -fopenmmp filename
