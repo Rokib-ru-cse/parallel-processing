@@ -11,7 +11,7 @@ void *func(void *var)
 }
 
 int main()
-{
+{ 
 
     pthread_t t_id;
     printf("before using threading\n");
